@@ -9,3 +9,7 @@ textArea.addEventListener("input", function(ev) {
 socket.on("text", function(data) {
   textArea.value = data;
 });
+
+function copyToClipboard() {
+  navigator.clipboard.writeText(textArea.value);
+}

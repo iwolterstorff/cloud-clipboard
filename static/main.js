@@ -1,3 +1,10 @@
+if (!window.isSecureContext) {
+  here = new URL(window.location);
+  here.protocol = "https:";
+  window.location = here.href;
+}
+
+
 var socket = io();
 
 var textArea = document.getElementById("thisiswherethestuffgoes");
